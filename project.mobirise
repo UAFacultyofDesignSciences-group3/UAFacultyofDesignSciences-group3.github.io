@@ -34,7 +34,7 @@
     "favicon": "",
     "noImageResize": "",
     "versionFirst": "4.4.1",
-    "uniqCompNum": 73,
+    "uniqCompNum": 74,
     "versionPublish": "4.4.1"
   },
   "pages": {
@@ -471,6 +471,28 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            }
+          },
+          "_name": "header6",
+          "_customHTML": "<section class=\"header6\"\n         group=\"Headers\"\n         data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\"\n         mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background4.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#555555\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\" selected>\n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\"\n         mbr-if=\"overlay && bg.type!== 'color'\"\n         mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"container\">\n        <div class=\"row justify-content-md-center\">\n            <div class=\"mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center mbr-bold pb-3 mbr-fonts-style\"\n                    mbr-theme-style=\"display-1\"\n                    mbr-if=\"showTitle\">\n                    INTRO WITH BACKGROUND VIDEO\n                </h1>\n                <p class=\"mbr-text align-center pb-3 mbr-fonts-style\"\n                   mbr-theme-style=\"display-5\"\n                   mbr-if=\"showText\"\n                   data-app-selector=\".mbr-text, .mbr-section-btn\">\n                    Intro with background video and color overlay. Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface.\n                </p>\n                <div class=\"mbr-section-btn align-center\"\n                    mbr-if=\"showButtons\"\n                    data-toolbar=\"-mbrBtnMove\"\n                    mbr-buttons mbr-theme-style=\"display-4\">\n                        <a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">LEARN MORE</a>\n                        <a class=\"btn btn-md btn-white-outline\" href=\"https://mobirise.com\">LIVE DEMO</a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div mbr-if=\"showArrow\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "qDS8mzXr9I",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "header6-21"
         }
       ]
     },
@@ -5443,7 +5465,7 @@
             }
           },
           "_name": "content1",
-          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>Eén van de problematieken in onze maatschappij is de overconsumptie dat we voor normaal nemen. Elke dag worden kilo’s eten weggegooid en tonnen afval verbrand. Al de productieprocessen die nodig zijn om ons in onze “noden” te voorzien belasten enorm de planeet. Dit is een thematiek dat wij willen aankaarten in ons object dat we zullen ontwerpen. Inspiratie voor de vormgeving haalden we bij Jan Fabre en Anish Kapoor. Wij willen een twist geven aan hun visie door het gebruik van vlees te koppelen aan interieurarchitectuur. In een verder denkproces bleek het gebruik van rauw vlees niet optimaal voor het ontwerp op lange termijn. Hiervoor zochten we een oplossing om het vlees op een manier zo realistisch mogelijk voor te stellen. Anish Kapoor gaf ons hier een goede aanzet voor. Hij creëerde werken uit siliconen die zeer gelijkend zijn op vlees. Hierdoor valt de confrontatie met het rottingsproces en stank weg. Het werk kan dus bestaan op lange termijn. Om het bewerken van deze siliconen beter te begrijpen haalden we ook inspiratie bij make-up artist. Zij maken vleeswonden en volledige lichaamsprotheses uit siliconen en latex. Eén van de problemen bij siliconen is namelijk dat deze niet beschilderbaar zijn. Je moet de siliconen voor het droogproces mengen met de gewenste kleur.</div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"mbr-section article content1\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"0\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#ffffff\">\n    <!-- End block parameters -->\n    </mbr-parameters> \n\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"mbr-text col-12 col-md-8 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>Eén van de problematieken in onze maatschappij is de overconsumptie dat we voor normaal nemen. Elke dag worden kilo’s eten weggegooid en tonnen afval verbrand. Al de productieprocessen die nodig zijn om ons in onze “noden” te voorzien belasten enorm de planeet. Dit is een thematiek dat wij willen aankaarten in ons object dat we zullen ontwerpen. Inspiratie voor de vormgeving haalden we bij Jan Fabre en Anish Kapoor. Wij willen een twist geven aan hun visie door het gebruik van vlees te koppelen aan interieurarchitectuur. In een verder denkproces bleek het gebruik van rauw vlees niet optimaal voor het ontwerp op lange termijn. Hiervoor zochten we een oplossing om het vlees op een manier zo realistisch mogelijk voor te stellen. Anish Kapoor gaf ons hier een goede aanzet voor. Hij creëerde werken uit siliconen die zeer gelijkend zijn op vlees. Hierdoor valt de confrontatie met het rottingsproces en stank weg. Het werk kan dus bestaan op lange termijn. Om het bewerken van deze siliconen beter te begrijpen haalden we ook inspiratie bij make-up artist. Zij maken vleeswonden en volledige lichaamsprotheses uit siliconen en latex. Eén van de problemen bij siliconen is namelijk dat deze niet beschilderbaar zijn. Je moet de siliconen voor het droogproces mengen met de gewenste kleur.</div>\n        </div>\n    </div>\n</section>",
           "_cid": "qDuTDYrDHM",
           "_anchor": "content1-1k",
           "_protectedParams": [],
